@@ -33,15 +33,6 @@ public class CityController {
         return modelAndView;
     }
 
-//    public String search(@RequestParam("term") String term, Model model) {
-//        if (StringUtils.isEmpty(term)) {
-//            return "redirect:/city";
-//        }
-//
-//        model.addAttribute("cities", cityService.findByNameContaining(term.get());
-//        return "list";
-//    }
-
     @GetMapping("/city/add")
     public ModelAndView add(){
         City city = new City();
