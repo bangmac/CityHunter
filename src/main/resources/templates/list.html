@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout :: head"></head>
+<head th:replace="layout :: head">
+	      	<meta charset="utf-8" />
+</head>
 
 <body>
+	Language :
+	<a href="?language=en">English</a>|
+	<a href="?language=vi_VN">Viet Nam</a>|
+	<a href="?language=ja_JP">Japanese</a>|
+	<a href="?language=fr_FR">France</a>
+<!--	<p th:text="${message}">User test</p>-->
+	<p th:text="#{hello}"></p></div>
+
 	<nav th:replace="layout :: header"></nav>
 
 	<div class="container" id="main-content">
@@ -37,7 +47,7 @@
 
 			<th:block th:unless="${#lists.isEmpty(cities)}">
 				<div class="table-responsive">
-					<h5>List of City</h5>
+					<h5 th:text="#{List of City}"></h5>
 					<table class="table table-bordered table-hover">
 						<thead>
 						<tr>

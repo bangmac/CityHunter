@@ -3,6 +3,7 @@ package com.bmv.kiemtramodule4.controller;
 import com.bmv.kiemtramodule4.model.City;
 import com.bmv.kiemtramodule4.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -18,6 +19,9 @@ import javax.validation.Valid;
 
 @Controller
 public class CityController {
+    @Autowired
+    private MessageSource messageSource;
+
     @Autowired
     private CityService cityService;
 
